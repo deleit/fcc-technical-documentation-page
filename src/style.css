@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+* {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 1.25vw;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: lightgray;
+  border-right: 2px black solid;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0px;
+  left: 0px;
+  width: 25%;
+  height: 100%;
+}
+
+.navheader {
+  font-weight: 700;
+  font-size: 1.5em;
+  padding: 1em;
+  border: 1px black solid;
+}
+
+.navlist {
+  overflow: auto;
+  height: 88%;
+}
+
+.navlist__item {
+  padding: 1em;
+  border: 1px black solid;
+}
+
+.navlist__item:hover {
+  background-color: #010081;
+}
+
+.navlist__item:hover a {
+  color: #fff;
+}
+
+.main {
+  background: #008080;
+  grid-area: main;
+  position: absolute;
+  margin-left: 25%;
+}
+
+.section__header {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.section__article {
+  margin: 1em;
+  text-align: justify;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.section__paragraph {
+  color: #fff;
+  margin: 1em;
+}
+
+.section__list {
+  color: #fff;
+  list-style-type: square;
+}
+
+.section__list-item {
+  color: #fff;
+  margin: 1em 1em 1em 4em;
+}
+
+.section__code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: lightgray;
+  padding: 1.5em;
+  margin: 1em;
+  border: 1px solid black;
+  box-shadow: 5px 5px black;
+}
+
+/***** Tablet view *****/
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    font-size: 1.5vw;
+  }
+  
+  .main {
+    font-size: 2vw;
+  }
+}
+
+/***** Mobile view *****/
+@media (max-width: 767px) {
+  body {
+    font-size: 5vw;
+  }
+  
+  .navbar {
+    font-size: 2.5vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 150px;
+    overflow: auto;
+  }
+  
+  .main{
+    position: relative;
+    margin-left: 0px;
+    margin-top: 150px;
+  }
+
+}
